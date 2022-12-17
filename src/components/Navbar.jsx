@@ -91,9 +91,6 @@ const Navbar = () => {
           <Link to={"/"} style={{ marginRight: "3vw" }}>
             Home
           </Link>
-          <Link to={"/category"} style={{ marginRight: "3vw" }}>
-            Category
-          </Link>
           <Link to={"/cart"} style={{ marginRight: "3vw" }}>
             Cart
           </Link>

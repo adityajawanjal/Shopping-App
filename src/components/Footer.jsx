@@ -1,12 +1,14 @@
-import React from 'react';
-import {} from '@chakra-ui/react';
+import React from "react";
+import { Center } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
     <>
-      Footer
+      <Center minH={"20"} bgColor={"linkedin.100"} minW={"full"}>
+        All the &copy; Copyrights are Reserved.
+      </Center>
     </>
-  )
-}
+  );
+};
 
 export default Footer;
