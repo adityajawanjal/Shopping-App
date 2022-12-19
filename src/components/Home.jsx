@@ -10,7 +10,6 @@ const Home = () => {
   useEffect(() => {
     const getAllProducts = async () => {
       const data = await axios.get("https://fakestoreapi.com/products");
-      console.log(data.data);
       setProducts(data.data);
     };
     getAllProducts();

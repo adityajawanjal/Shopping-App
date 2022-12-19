@@ -9,8 +9,12 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "./redux/cartSlice";
 
 const Card = ({ name, img, info, price }) => {
+  const dispatch = useDispatch();
+
   return (
     <>
       <VStack
@@ -44,7 +48,7 @@ const Card = ({ name, img, info, price }) => {
             <Button type="button"> + </Button>
           </HStack>
           <Center>
-            <Button type="button" bgColor={"blue.100"} m={"3"}>
+            <Button type="button" bgColor={"blue.100"} m={"3"} onClick={()=>dispatch(addToCart({name,img,info,price}))} >
               Add to Cart : {price}
             </Button>
           </Center>

@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useState} from "react";
 import {
   Button,
   Center,
@@ -13,8 +13,13 @@ import {
   Thead,
   Tr,
 } from "@chakra-ui/react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 const Cart = () => {
+  const items = useSelector((state)=>state.cart);
+  console.log(items);
+
   return (
     <>
       <Grid templateColumns={{ base: "auto", lg: "7fr 3fr" }} gap={1}>
@@ -37,7 +42,7 @@ const Cart = () => {
               <Tbody>
                 <Tr>
                   <Td>1. </Td>
-                  <Td>IPhone</Td>
+                  <Td>{items.name}</Td>
                   <Td display={{ base: "none", sm: "block" }}>
                     <Image
                       src="https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074075.jpg?w=2000"
